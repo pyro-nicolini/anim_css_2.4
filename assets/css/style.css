@@ -95,13 +95,13 @@ aside {
   flex-direction: column;
   justify-content: flex-start;
   box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.241);
+  padding-bottom: 0.5rem;
 }
 
 aside a {
   color: #ff746a;
   text-decoration: none;
   font-size: 1rem;
-  padding: 1rem 0;
 }
 
 aside a:hover {
@@ -118,7 +118,7 @@ aside a:hover {
 }
 
 .logo img {
-  width: 12rem;
+  width: 8rem;
   height: auto;
   animation: vals 7s infinite linear;
   transition: scale 0.3s ease-in-out;
@@ -292,6 +292,9 @@ footer a:hover {
   }
   .logo {
     flex-direction: column;
+  }
+  .logo img {
+    width: 12rem;
   }
   .menu {
     flex-direction: column;
