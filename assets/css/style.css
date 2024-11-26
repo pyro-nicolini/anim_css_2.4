@@ -129,6 +129,12 @@ aside {
   width: 100%;
   border-bottom: #f9b121 2px solid;
 }
+.logo2, aside img {
+  display: none;
+}
+
+
+
 .menu {
   display: flex;
   justify-content: space-evenly;
@@ -301,7 +307,7 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 3rem;
+  gap: 1rem;
   padding: 0.5rem;
   background-color: var(--beige-dark);
   z-index: 3;
@@ -367,10 +373,12 @@ footer a:hover {
     height: 100%;
     position: fixed;
     z-index: 2;
-    justify-content: start;
+    justify-content: center;
     color: black;
     align-items: center;
     gap: 10rem;
+    flex-direction: column;
+
   }
   .logo img {
     width: 15rem;
@@ -393,6 +401,22 @@ footer a:hover {
     text-decoration: none;
     font-size: 1.3rem;
   }
+  aside img {
+    display: block;
+    width: 8rem;
+    height: auto;
+  }
+
+  .logo2 {
+    display: block;
+    color: #18c7d3;
+    font-size: 1rem;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.7);
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+  }
+
   main {
     height: 100%;
     display: flex;
