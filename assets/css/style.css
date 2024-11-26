@@ -39,8 +39,6 @@ body {
   grid-template-rows: auto auto 1fr auto;
   height: 100vh;
   width: 100%;
-  overflow-x: hidden;
-
 }
 
 header {
@@ -266,9 +264,11 @@ main {
   display: grid;
   grid-template-areas: 
     "section"
-    "gallery";
+    "gallery"
+    "contacto";
   grid-template-columns: 1fr;
-  grid-template-rows: auto auto;
+  grid-template-rows: auto auto auto;
+  overflow-y: scroll;
 }
 
 footer {
@@ -301,6 +301,7 @@ footer a:hover {
 }
 
 .contacto {
+  grid-area: contacto;
   display: flex;
   justify-content: center;
   text-align: center;
@@ -473,6 +474,7 @@ footer a:hover {
   }
 
   .contacto {
+    grid-area: contacto;
     flex-direction: row;
     align-items: start;
     gap: 1rem;
