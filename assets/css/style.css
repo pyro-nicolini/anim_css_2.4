@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=League+Spartan:wght@100..900&family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Style+Script&display=swap');
 * {
   margin: 0;
   padding: 0;
@@ -40,7 +41,62 @@ body {
   height: 100vh;
   width: 100%;
 }
+#section1 {
+  font-family: "Style Script";
+  font-size: 2rem;
+  grid-area: section;
+  position: relative;
+  width: 100%;
+  min-height: 50vh;
+  animation: fondou 15s ease-in-out infinite;
+  background-position: center 40%;
+  background-attachment: fixed;
+  background-size: cover;
+  background-image: url('../img/sec4.webp');
+}
 
+@keyframes fondou {
+  15% {
+    background-image: url('../img/sec5.webp');
+  }
+  30% {
+    background-image: url('../img/sec1.webp');
+  }
+  45% {
+    background-image: url('../img/sec2.webp');
+  }
+  60% {
+    background-image: url('../img/sec3.webp');
+  }
+  74% {
+    background-image: url('../img/sec6.webp');
+  }
+  100% {
+    background-image: url('../img/sec4.webp');
+  }
+}
+
+#section1 p {
+  font-size: 1.5rem;
+  font-family: poppins;
+}
+#section1 h1, 
+#section1 p {
+position: relative;
+z-index: 1;
+color: rgb(255, 255, 255) !important;
+text-shadow: 3px 3px 3px rgb(0, 0, 0);
+}
+
+
+#section1 {
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+text-align: center;
+gap: 1rem;
+}
 header {
   display: flex;
   grid-area: header;
@@ -76,7 +132,7 @@ button:hover {
 
 aside {
   grid-area: aside;
-  background: rgba(255, 255, 255, 0.413);
+  background: rgba(255, 255, 255, 0.837);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -133,39 +189,29 @@ aside a:hover {
 
 #section1 {
     grid-area: section;
-    position: relative; /* Habilita un contenedor posicionador */
-    width: 100%; /* Opcional, para asegurarte de ocupar todo el ancho */
-    min-height: 50vh; /* Configura altura completa de la ventana */
-}
-
-/* Haz que el video llene el contenedor */
-#section1 video {
+    position: relative;
     width: 100%;
-    height: 100%;
-    object-fit: cover; /* Ajusta el video sin distorsión */
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 0; /* Envía el video detrás del contenido */
+    min-height: 50vh;
 }
 
-/* Crea un contenedor para los elementos superpuestos */
+
+
 #section1 h1, 
 #section1 p, 
 #section1 button {
     position: relative;
-    z-index: 1; /* Asegúrate de que estén por encima del video */
-    color: white; /* Contraste para que sean legibles */
+    z-index: 1;
+    color: white;
 }
 
 /* Contenedor centrado */
 #section1 {
     display: flex;
     flex-direction: column;
-    justify-content: center; /* Centra verticalmente */
-    align-items: center; /* Centra horizontalmente */
-    text-align: center; /* Centra el texto */
-    gap: 1rem; /* Espaciado entre los elementos */
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 1rem;
 }
 
 
@@ -174,8 +220,8 @@ aside a:hover {
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   grid-auto-rows: minmax(150px, auto);
   width: 100%;
-  max-width: 1200px; /* Ajusta según tu diseño */
-  margin: 0 auto; /* Centra el grid */
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .pitem {
@@ -269,6 +315,7 @@ main {
   grid-template-columns: 1fr;
   grid-template-rows: auto auto auto;
   overflow-y: scroll;
+  overflow-x: hidden;
 }
 
 footer {
@@ -281,6 +328,7 @@ footer {
   gap: 3rem;
   padding: 0.5rem;
   background-color: var(--beige-dark);
+  z-index: 3;
 }
 footer a {
   color: #ff746a;
@@ -325,44 +373,6 @@ footer a:hover {
     
   }
 
-  
-#section1 {
-  grid-area: section;
-  position: relative; /* Habilita un contenedor posicionador */
-  width: 100%; /* Opcional, para asegurarte de ocupar todo el ancho */
-  min-height: 50vh; /* Configura altura completa de la ventana */
-}
-
-/* Haz que el video llene el contenedor */
-#section1 video {
-  width: 100%;
-  height: 100%;
-  object-fit: cover; /* Ajusta el video sin distorsión */
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 0; /* Envía el video detrás del contenido */
-}
-
-/* Crea un contenedor para los elementos superpuestos */
-#section1 h1, 
-#section1 p, 
-#section1 button {
-  position: relative;
-  z-index: 1; /* Asegúrate de que estén por encima del video */
-  color: white; /* Contraste para que sean legibles */
-}
-
-/* Contenedor centrado */
-#section1 {
-  display: flex;
-  flex-direction: column;
-  justify-content: center; /* Centra verticalmente */
-  align-items: center; /* Centra horizontalmente */
-  text-align: center; /* Centra el texto */
-  gap: 1rem; /* Espaciado entre los elementos */
-}
-
   header {
     display: flex;
     grid-area: header;
@@ -370,7 +380,7 @@ footer a:hover {
     height: 8rem;
     justify-content: center;
     align-items: center;
-    z-index: 2;
+    z-index: 4;
     background-color: var(--beige-dark);
     border-bottom: #cc7b0a 5px solid; 
     font-size: 1.2rem;
@@ -386,7 +396,7 @@ footer a:hover {
     background-color: rgba(255, 255, 255, 0.849);
     height: 100%;
     position: fixed;
-    z-index: 1;
+    z-index: 2;
     justify-content: start;
     color: black;
     align-items: center;
@@ -485,4 +495,57 @@ footer a:hover {
     padding: 3rem 0;
   }
   
+}
+@media (max-width: 569px) {
+  #section1 {
+    grid-area: section;
+    position: relative;
+    width: 100%;
+    min-height: 50vh;
+    animation: fondou 15s ease-in-out infinite;
+    background-position: center 40%;
+    background-size: cover;
+    background-image: url('../img/sec4.webp');
+    background-attachment: fixed;
+  }
+  
+  @keyframes fondou {
+    15% {
+      background-image: url('../img/sec5.webp');
+    }
+    30% {
+      background-image: url('../img/sec1.webp');
+    }
+    45% {
+      background-image: url('../img/sec2.webp');
+    }
+    60% {
+      background-image: url('../img/sec3.webp');
+    }
+    74% {
+      background-image: url('../img/sec6.webp');
+    }
+    100% {
+      background-image: url('../img/sec4.webp');
+    }
+  }
+
+
+#section1 h1, 
+#section1 p, 
+#section1 button {
+  position: relative;
+  z-index: 1;
+  color: white;
+}
+
+
+#section1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 1rem;
+}
 }
