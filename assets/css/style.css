@@ -6,7 +6,7 @@
 
 body {
   font-family: "Poppins", sans-serif;
-  background: #fff7d3;
+  background: #f8a7a7;
   color: #606060;
   line-height: 1.6;
   display: grid;
@@ -57,11 +57,10 @@ header {
 
 aside {
   grid-area: aside;
-  background: rgba(255, 255, 255, 0.837);
+  background: rgb(255, 255, 255);
   display: flex;
   justify-content: center;
   align-items: center;
-  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.241);
   height: 4rem;
   width: 100%;
   border-bottom: #f9b121 2px solid;
@@ -131,31 +130,34 @@ main {
   flex-direction: column;
   gap: 1rem;
   grid-area: hero;
-  height: 1000px;
+  height: 50vh;
   justify-content: center;
   position: relative;
   text-align: center;
-  text-shadow: 3px 3px 3px rgb(0, 0, 0);
+  text-shadow: 2px 2px 3px rgb(0, 0, 0);
   width: 100%;
 }
 
 @keyframes fondou {
-  15% {
+  0%, 100% {
+    background-image: url('../img/sec01.webp');
+  }
+  13% {
     background-image: url('../img/sec1.webp');
   }
-  30% {
+  26% {
     background-image: url('../img/sec2.webp');
   }
-  45% {
+  39% {
     background-image: url('../img/sec3.webp');
   }
-  60% {
+  52% {
     background-image: url('../img/sec4.webp');
   }
-  74% {
+  65% {
     background-image: url('../img/sec5.webp');
   }
-  100% {
+  78% {
     background-image: url('../img/sec6.webp');
   }
 }
@@ -167,7 +169,12 @@ main {
 #hero h1 {
   font-size: 2rem;
   text-wrap: wrap;
+  text-shadow: #000000 1px 1px 10px;
+  padding: 1rem 2rem;
+  background-color: #3702825e;
 }
+
+
 
 #hero h1, 
 #hero p,
@@ -187,15 +194,49 @@ button {
   cursor: pointer;
   transition: all 0.2s ease-in-out;
   box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.241);
-  border: #001eff 1px solid;
+  text-shadow: #000000 1px 1px 10px;
+  border: #5100ff 2px solid;
+  animation: multicolor 5s ease-in-out infinite, espacius 5s ease-in-out infinite;
 }
-button:hover {
+button:hover, button:focus {
   color: rgb(255, 252, 252);
   font-weight: 400;
   background-color: rgb(175, 90, 255);
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.241);
-  transform: scale(1.2);
+  transform: scale(1.3);
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.722);
 }
+
+@keyframes multicolor {
+  0%, 100% {
+    background-color: #be90ff5e;
+  }
+  25% {
+    background-color: #ff00d95e;
+  }
+  50% {
+    background-color: #00b0fb5e;
+  }
+  75% {
+    background-color: #b79f015e;
+  }
+}
+
+@keyframes espacius {
+  0%, 100% {
+    padding: .8rem 3rem;
+  }
+  25% {
+    padding: .5rem 2rem;
+  }
+  50% {
+    padding: .8rem 3rem;
+  }
+  75% {
+    padding: .5rem 2rem;
+  }
+}
+
 
 .pgrid {
   display: grid;
@@ -301,8 +342,8 @@ button:hover {
 
 footer {
   grid-area: footer;
-  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.454);
   text-align: center;
+  border-top: rgb(198, 157, 60) solid 3px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -366,21 +407,52 @@ footer a:focus {
 
 .servicios {
   grid-area: servicios;
-  display: flex;
+  display: grid;
   justify-content: center;
-  text-align: center;
-  flex-direction: column;
+  text-align: start;
   align-items: center;
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  width: 100%;
+  gap: 1rem;
+  padding: 1rem;
 }
 .servicios>div {
-  width: 100%;
-  padding: 1rem 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 1rem 3rem;
+  background-color: wheat;
+  height: 16rem;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.433);
+  transition: all 0.2s ease-in-out;
+  border-radius: 1rem;
+  border: 5px dotted rgb(255, 183, 14);
+}
+
+.servicios>div:hover {
+  transition: all 0.2s ease-in-out;
+  box-shadow: 8px 8px 10px rgba(0, 0, 0, 0.565);
+  animation: meser 5s ease-in-out infinite;
+}
+
+@keyframes meser {
+  0%, 100% {
+    transform: rotate(0);
+  }
+  20% {
+    transform: rotate(-3deg);
+  }
+  80% {
+    transform: rotate(3deg);
+  }
+
 }
 
 .servicios>div h2 {
   color: #ff4c76;
   margin-bottom: 0.5rem;
-  font-size: 1.1rem;
+  font-size: 1rem;
   transition: all 0.2s ease-in-out;
 }
 
@@ -391,12 +463,13 @@ footer a:focus {
 }
 
 .servicios>div li {
-  margin: 0.5rem;
+  list-style: none;
+  margin: 1rem;
   transition: all 0.2s ease-in-out;
 }
 
 .servicios>div li:hover {
-  font-weight: 600;
+  font-weight: 400;
   color: #1f1f1f;
 }
 
@@ -436,16 +509,14 @@ footer a:focus {
   aside {
     padding: 3rem 0;
     width: 13rem;
-    background-color: rgba(255, 255, 255, 0.671);
     height: 100%;
-    position: fixed;
     z-index: 2;
     justify-content: center;
     color: black;
     align-items: center;
     gap: 4rem;
     flex-direction: column;
-
+    border-right: rgb(255, 255, 127) solid 2px;
   }
   .logo img {
     width: 15rem;
@@ -558,13 +629,11 @@ footer a:focus {
   }
   .servicios {
     grid-area: servicios;
-    flex-direction: row;
-    align-items: start;
-    gap: 1rem;
+    gap: 2rem;
+    max-width: 2000px;
   }
   .servicios>div {
-    width: 15rem;
-    padding: 3rem 0;
+    padding: 1rem 1rem;
   }
   footer {
     justify-content: space-evenly;
