@@ -41,10 +41,9 @@ body {
   grid-area: section;
   position: relative;
   width: 100%;
-  min-height: 50vh;
+  height: 100%;
   animation: fondou 15s ease-in-out infinite;
   background-position: center 40%;
-  background-attachment: fixed;
   background-size: cover;
   background-image: url('../img/sec4.webp');
 }
@@ -70,10 +69,10 @@ body {
 }
 #section1 p {
   font-size: 1.5rem;
-  font-family: poppins;
 }
 #section1 h1, 
 #section1 p {
+  font-family: poppins;
 position: relative;
 z-index: 1;
 color: rgb(255, 255, 255) !important;
@@ -86,7 +85,10 @@ justify-content: center;
 align-items: center;
 text-align: center;
 gap: 1rem;
+background-repeat: no-repeat;
+gap: 1rem;
 }
+
 header {
   display: flex;
   grid-area: header;
@@ -183,24 +185,14 @@ aside a {
     width: 100%;
     min-height: 50vh;
 }
-#section1 h1, 
-#section1 p, 
 #section1 button {
     position: relative;
     z-index: 1;
 }
 
-/* Contenedor centrado */
-#section1 {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    gap: 1rem;
-}
 .pgrid {
   display: grid;
+  grid-area: gallery;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   grid-auto-rows: minmax(150px, auto);
   width: 100%;
@@ -425,6 +417,16 @@ footer a:hover {
     align-items: center;
     flex: 1;
   }
+
+  #section1 {
+    width: 100%;
+    min-height: 50vh;
+    max-width: 2000px;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
   .pgrid {
     width: 100%;
     max-width: 2000px;
@@ -492,10 +494,10 @@ footer a:hover {
     grid-area: section;
     position: relative;
     width: 100%;
-    min-height: 50vh;
+    height: 50vh;
     animation: fondou 15s ease-in-out infinite;
-    background-position: center 40%;
-    background-size: cover;
+    background-position: center 60%;
+    background-size: contain;
     background-image: url('../img/sec4.webp');
     background-attachment: fixed;
   }
