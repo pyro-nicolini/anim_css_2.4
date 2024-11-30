@@ -7,3 +7,8 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       });
     });
   });
+
+  window.addEventListener('load', () => {
+    const heroSection = document.getElementById('hero');
+    heroSection.classList.add('loaded');
+  });
