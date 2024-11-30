@@ -120,7 +120,7 @@ main {
   z-index: -1;
   background-size: cover;
   background-position: center;
-  animation: fondou 15s ease-in-out infinite;
+  animation: fondou 5s ease-in-out infinite;
 }
 #hero {
   animation: fondou 15s ease-in-out infinite;
