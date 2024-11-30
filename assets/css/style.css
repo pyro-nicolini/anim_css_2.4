@@ -463,11 +463,15 @@ footer p {
 
 .icons {
   display: flex;
-  color: #a813ad;
+  justify-content: center;
+  gap: 2rem;
+  animation: subirBajar 2s infinite linear;
   font-size: 2.1rem;
+}
+
+.icons a {
+  color: #a813ad;
   transition: all 0.2s ease-in-out;
-  animation: estirar 2s infinite linear;
-  gap: 3rem;
   text-decoration: none;
   cursor: pointer;
 }
@@ -494,7 +498,6 @@ footer p {
 }
 
 .icon:hover {
-  transition: all 0.2s ease-in-out;
   color: #4c00ff;
   transform: scale(2);
 }
