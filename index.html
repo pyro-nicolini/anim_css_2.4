@@ -2,18 +2,29 @@
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Bodagraphy</title>
     <link rel="stylesheet" href="assets/css/style.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
-    <link href="https://fonts.googleapis.com/css2?family=Style+Script&display=swap" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Style+Script&display=swap"
+      rel="stylesheet"
+    />
     <link
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
       rel="stylesheet"
     />
+    <!-- Evitar el flickering / al cargar mi hero -->
+    <link rel="preload" href="../img/sec01.webp" as="image" />
+    <link rel="preload" href="../img/sec1.webp" as="image" />
+    <link rel="preload" href="../img/sec2.webp" as="image" />
+    <link rel="preload" href="../img/sec3.webp" as="image" />
+    <link rel="preload" href="../img/sec4.webp" as="image" />
+    <link rel="preload" href="../img/sec5.webp" as="image" />
+    <link rel="preload" href="../img/sec6.webp" as="image" />
   </head>
   <body>
     <header>
@@ -26,7 +37,7 @@
       <div class="logo2">
         <img src="assets/img/logo.webp" alt="Logo de Bodagraphy" />
         <h2>Bodagraphy's</h2>
-      </div>      
+      </div>
       <nav class="menu">
         <a href="#hero">INICIO</a>
         <a href="#gallery">GALERÍA</a>
@@ -37,7 +48,9 @@
       <section id="hero">
         <h1>"Tú día en un hermoso recuerdo"</h1>
         <p>Agenda tú evento con anticipación</p>
-        <button href="mailto:hola@gmail.com" target="_blank">AGENDAR</button>
+        <a href="mailto:hola@gmail.com" target="_blank">
+          <button>AGENDAR</button>
+        </a>
       </section>
       <section class="pgrid" id="gallery">
         <div class="pitem p1">
@@ -79,13 +92,18 @@
           <h2><i class="fas fa-camera"></i> Cobertura Eventos</h2>
           <ul>
             <li>- Fotografía desde los preparativos hasta la fiesta.</li>
-            <li>- Captura de momentos clave como el primer baile y el intercambio de votos.</li>
+            <li>
+              - Captura de momentos clave como el primer baile y el intercambio
+              de votos.
+            </li>
           </ul>
         </div>
         <div>
           <h2><i class="fas fa-heart"></i> Sesión Preboda</h2>
           <ul>
-            <li>- Sesión romántica en exteriores para generar un recuerdo único.</li>
+            <li>
+              - Sesión romántica en exteriores para generar un recuerdo único.
+            </li>
             <li>- Fotografías ideales para invitaciones o decoración.</li>
           </ul>
         </div>
@@ -99,7 +117,10 @@
         <div>
           <h2><i class="fas fa-gem"></i> Fotografía de Detalles</h2>
           <ul>
-            <li>- Captura de elementos clave como anillos, decoración y el vestido.</li>
+            <li>
+              - Captura de elementos clave como anillos, decoración y el
+              vestido.
+            </li>
             <li>- Imágenes ideales para álbumes o redes sociales.</li>
           </ul>
         </div>
@@ -113,35 +134,52 @@
         <div>
           <h2><i class="fas fa-video"></i> Video de Resumen</h2>
           <ul>
-            <li>- Edición dinámica que captura los momentos más emotivos del evento.</li>
-            <li>- Perfecto para compartir en redes sociales o guardar como recuerdo.</li>
+            <li>
+              - Edición dinámica que captura los momentos más emotivos del
+              evento.
+            </li>
+            <li>
+              - Perfecto para compartir en redes sociales o guardar como
+              recuerdo.
+            </li>
           </ul>
         </div>
         <div>
           <h2><i class="fas fa-users"></i> Sesión Familiar</h2>
           <ul>
-            <li>- Fotografías con los seres queridos en un ambiente relajado.</li>
+            <li>
+              - Fotografías con los seres queridos en un ambiente relajado.
+            </li>
             <li>- Incluye retratos grupales y espontáneos.</li>
           </ul>
         </div>
         <div>
           <h2><i class="fas fa-print"></i> Impresión Gran Formato</h2>
           <ul>
-            <li>- Impresión de fotografías seleccionadas en canvas o papel fotográfico.</li>
+            <li>
+              - Impresión de fotografías seleccionadas en canvas o papel
+              fotográfico.
+            </li>
             <li>- Calidad premium para decorar tu hogar o regalar.</li>
           </ul>
         </div>
-      </section>   
+      </section>
     </main>
     <footer>
       <div>
         <h3>¿Hablamos? <i class="far fa-hand-pointer"></i></h3>
-        <p><i class="fas fa-phone-alt"></i> +56 9 12345678</p>
+        <p><i class="fas fa-phone-alt"></i> +569 12345678</p>
       </div>
       <div class="icons">
-          <a class="icon" href="mailto:hola@gmail.com" target="_blank"><i class="fas fa-envelope"></i></a>
-          <a class="icon" href="https://www.facebook.com" target="_blank"><i class="fab fa-instagram"></i></a>
-          <a class="icon" href="https://www.instagram.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+        <a class="icon" href="mailto:hola@gmail.com" target="_blank"
+          ><i class="fas fa-envelope"></i
+        ></a>
+        <a class="icon" href="https://www.facebook.com" target="_blank"
+          ><i class="fab fa-instagram"></i
+        ></a>
+        <a class="icon" href="https://www.instagram.com" target="_blank"
+          ><i class="fab fa-facebook-f"></i
+        ></a>
       </div>
     </footer>
     <script src="assets/js/app.js"></script>
