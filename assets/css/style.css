@@ -480,12 +480,19 @@ footer p {
   }
 }
 .icon:hover {
-  color: #4c00ff;
+  color: #ffe3b5;
   transform: scale(2);
 }
+
 ::-webkit-scrollbar {
-  display: none;
+  width: 12px;
+  background-color: #b9a855;
 }
+::-webkit-scrollbar-thumb {
+  background-color: #6d1fe2;
+  border-radius: 10px;
+}
+
 @media (min-width: 600px) {
   body {
     grid-template-areas:
